@@ -17,6 +17,19 @@ function error_occur($str) {
 
 $proj=new Project;
 
+if ($project_name=="") {
+  error_occur("Project name is required.");
+}
+
+if ($owner_name=="") {
+  error_occur("Owner name is required.");
+}
+
+if ($owner_email=="") {
+  error_occur("Owner e-mail address is required.");
+}
+
+
 if ($short_desc=="") {
   error_occur("Short description is required.");
 }

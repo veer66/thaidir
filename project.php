@@ -14,7 +14,7 @@ class Project {
 	function &recent() {
     		global $database;
     		$array=array();
-    		$query="select name,category,subcategory,shortdesc from project order by update_time desc limit 0,10";
+    		$query="select name,category,subcategory,shortdesc from project order by update_time desc limit 0,5";
     		$result=mysql_db_query($database,$query)
       			or die ("Could not query mysql: " . mysql_error() . "\n");
     		while ($row=mysql_fetch_object($result)) {
@@ -26,7 +26,7 @@ class Project {
 	function &new_rel() {
     		global $database;
     		$array=array();
-    		$query="select name,category,subcategory,shortdesc from project order by create_time desc limit 0,10";
+    		$query="select name,category,subcategory,shortdesc from project order by create_time desc limit 0,5";
     		$result=mysql_db_query($database,$query)
       			or die ("Could not query mysql: " . mysql_error() . "\n");
     		while ($row=mysql_fetch_object($result)) {
