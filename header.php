@@ -7,5 +7,6 @@
 <body>
 <center>
 <img src="logo.png" alt="Thai Free Software Directory"> 
+<br>Thai Free Software Directory<br>
 </center>
 <br>

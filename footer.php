@@ -16,7 +16,7 @@ width="210" height="62" border="0" alt="SourceForge.net Logo"></A>
 
 &nbsp
 <a href="http://www.project-ile.net/">
-<img border="0" src="http://www.project-ile.net/ilelink2.png" alt="Project-ILE">
+<img border="0" src="http://www.project-ile.net/ilelink2.png" alt="Project-ILE"></a>
     </p>
 </body>
 </html>

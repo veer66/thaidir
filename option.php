@@ -22,4 +22,7 @@ function thdir_optgen_def($filename,$default) {
 	}
 	fclose($fp);
 }
+
+
+
 ?>

@@ -11,7 +11,30 @@ class ProjectItem {
 }
 
 class Project {
+	function &recent() {
+    		global $database;
+    		$array=array();
+    		$query="select name,category,subcategory,shortdesc from project order by update_time desc limit 0,10";
+    		$result=mysql_db_query($database,$query)
+      			or die ("Could not query mysql: " . mysql_error() . "\n");
+    		while ($row=mysql_fetch_object($result)) {
+      			array_push($array,$row);
+    		}
+    		return $array;
+	}
 
+	function &new_rel() {
+    		global $database;
+    		$array=array();
+    		$query="select name,category,subcategory,shortdesc from project order by create_time desc limit 0,10";
+    		$result=mysql_db_query($database,$query)
+      			or die ("Could not query mysql: " . mysql_error() . "\n");
+    		while ($row=mysql_fetch_object($result)) {
+      			array_push($array,$row);
+    		}
+    		return $array;
+	}
+	
   var $link;
 
   function Project() {
@@ -20,10 +43,10 @@ class Project {
       or die ("Could not connect mysql: " . mysql_error() . "\n");
   }
 
-  function &dump() {
+  function &dump($cat) {
     global $database;
     $array=array();
-    $query="select name,category,subcategory,shortdesc from project order by name";
+    $query="select name,category,subcategory,shortdesc from project where category=\"$cat\" order by name";
     $result=mysql_db_query($database,$query)
       or die ("Could not query mysql: " . mysql_error() . "\n");
     while ($row=mysql_fetch_object($result)) {
