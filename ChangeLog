@@ -1,0 +1,2 @@
+2003-02-22 Vee Satayamas <virasj@users.sourceforge.net>
+	* add option.php for generating option from file so that mean to config category and license don't have to modify php.

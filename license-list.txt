@@ -1,0 +1,5 @@
+GPL
+LGPL
+BSD License
+X11 License
+FDL
